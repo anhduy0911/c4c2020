@@ -1,5 +1,5 @@
 /*Extra small devices (portrait phones, less than 576px)*/
-@media (max-width: 575px) {
+@media screen and (max-width: 575px) {
     .content-section {
         padding-top: 70px;
         padding-bottom: 70px;
@@ -60,6 +60,10 @@
 
     .owl-nav {
         display: none !important;
+    }
+
+    #fake-nav {
+        padding: 4% !important;
     }
 }
 
@@ -125,6 +129,10 @@
 
     .owl-nav {
         display: none !important;
+    }
+
+    #fake-nav {
+        padding: 2% !important;
     }
 }
 

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" /> -->
+        <title>Choose Domain</title>
+        <!--stylesheet-->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="../Style/bootstraps.css" rel="stylesheet" type="text/css">
+        <link href="../Style/custom-responsive-styles.css" rel="stylesheet" type="text/css">
+        <link href="../Style/addition.css" rel="stylesheet" type="text/css">
+        <!--scripts-->
+        <script type="text/javascript" src="../Scripts/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../Scripts/fancy_box.js"></script>
+        <script type="text/javascript" src="../Scripts/scroll_effect.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <!-- Navigation -->
+            <nav id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand">
+                        <a class="smooth-scroll" href="#"></a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a class="smooth-scroll" href="#">Domain</a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a class="smooth-scroll" href="#About">Dashboard</a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a class="smooth-scroll" href="#Services">Prediction</a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a class="smooth-scroll" href="#Portfolio">New Training</a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a class="smooth-scroll" href="#Testimonials">History</a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a class="smooth-scroll" href="#Contact">Support</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Header Starts -->
+            <section id="fake-nav">
+                <div class="cus-logo">
+                    <i class="fa fa-globe" aria-hidden="true"><span>LOGO</span></i>
+                </div>
+                <a class="menu-toggle rounded" href="#">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="overlay"></div>
+            </section>
+            <!-- Header Ends -->
+            <section class="content-section text-center">
+                <div class="container">
+                    <div class="block-heading">
+                        <h2 class="display-4">New Model</h2>
+                        <p>Choose parameter of preference to suit your need.</p>
+                    </div>
+                    <hr />
+                    <form method="POST">
+                        <div class="row mt-4">
+                            <div class="col-md-3 col-sm-6">
+                                <h3>Choose input fields:</h3>
+                            </div>
+                            <div class="col-md-9 col-sm-6" style="overflow: auto;height: 30vh;">
+                                <div class="form-check" v-for="input in input_list">
+                                    <input class="form-check-input form-control-lg" type="checkbox" value="" :id="input.field">
+                                    <label class="form-check-label" :for="input.field"> {{input.field}} </label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row mt-4">
+                            <div class="col-md-3 col-sm-6">
+                                <h3>Choose output fields:</h3>
+                            </div>
+                            <div class="col-md-9 col-sm-6" style="overflow: auto;height: 30vh;">
+                                <div class="form-check" v-for="output in output_list">
+                                    <input class="form-check-input form-control-lg" type="checkbox" value="" :id="output.field">
+                                    <label class="form-check-label" :for="output.field"> {{output.field}} </label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row mt-4">
+                            <div class="col-md-3 col-sm-6">
+                                <h3>Choose target timesteps to predict:</h3>
+                            </div>
+                            <div class="col-md-9 col-sm-6" style="overflow: auto;height: 30vh;">
+                                <div class="form-wrap mb-5">
+                                    <input class="form-control" type="number" placeholder="Enter the number here" min="0" />
+                                </div>
+                                <div class="form-check form-check-inline" v-for="frame in time_frame">
+                                    <input class="form-check-input form-control-lg" name="time_frame_opt" type="radio" value="" :id="frame">
+                                    <label class="form-check-label" :for="frame"> {{frame}}</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-lg btn-info px-3 text-center" type="submit">Next Step &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+            <footer class="footer text-center">
+                <div class="container">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a class="social-link rounded-circle text-white mr-3" href="javascript:void(0)">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="social-link rounded-circle text-white mr-3" href="javascript:void(0)">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="social-link rounded-circle text-white" href="javascript:void(0)">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="text-muted small mb-0">Copyright © Your Website 2018</p>
+                    <p class="text-muted small mb-0">Designed by <a href="https://www.position2.com/" target="_balnk">Position2</p>
+                </div>
+            </footer>
+        </div>
+        <script type="text/javascript" src="../Scripts/index.js"></script>
+    </body>
+
+</html>

@@ -15,6 +15,7 @@
         <link href="../Style/bootstraps.css" rel="stylesheet" type="text/css">
         <link href="../Style/custom-responsive-styles.css" rel="stylesheet" type="text/css">
         <link href="../Style/addition.css" rel="stylesheet" type="text/css">
+        <link href="../Style/dung.css" rel="stylesheet" type="text/css">
         <!--scripts-->
         <script type="text/javascript" src="../Scripts/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="../Scripts/fancy_box.js"></script>
@@ -25,48 +26,49 @@
     <body>
         <div id="app">
             <!-- Navigation -->
-            <nav id="sidebar-wrapper">
-                <ul class="sidebar-nav">
-                    <li class="sidebar-brand">
-                        <a class="smooth-scroll" href="#"></a>
-                    </li>
-                    <li class="sidebar-nav-item">
-                        <a class="smooth-scroll" href="#">Domain</a>
-                    </li>
-                    <li class="sidebar-nav-item">
-                        <a class="smooth-scroll" href="#About">Dashboard</a>
-                    </li>
-                    <li class="sidebar-nav-item">
-                        <a class="smooth-scroll" href="#Services">Prediction</a>
-                    </li>
-                    <li class="sidebar-nav-item">
-                        <a class="smooth-scroll" href="#Portfolio">New Training</a>
-                    </li>
-                    <li class="sidebar-nav-item">
-                        <a class="smooth-scroll" href="#Testimonials">History</a>
-                    </li>
-                    <li class="sidebar-nav-item">
-                        <a class="smooth-scroll" href="#Contact">Support</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="logo">
+            <i class="fa fa-globe" aria-hidden="true"><span>LOGO</span></i>
+        </div>
+        <a class="menu-toggle rounded" href="#">
+            <i class="fa fa-bars"></i>
+        </a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a class="smooth-scroll" href="#"></a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a class="smooth-scroll" href="#">Domain</a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a class="smooth-scroll" href="#About">Dashboard</a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a class="smooth-scroll" href="#Services">Prediction</a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a class="smooth-scroll" href="#Portfolio">New Training</a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a class="smooth-scroll" href="#Testimonials">History</a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a class="smooth-scroll" href="#Contact">Support</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Header Starts -->
+        <section id="Banner" class="content-section" style="max-height: 10vw !important;">
+            <div class="container content-wrap text-center">
+                <h1>Train Model</h1>
+            </div>
+            
+        </section>
             <!-- Header Starts -->
-            <section id="fake-nav">
-                <div class="cus-logo">
-                    <i class="fa fa-globe" aria-hidden="true"><span>LOGO</span></i>
-                </div>
-                <a class="menu-toggle rounded" href="#">
-                    <i class="fa fa-bars"></i>
-                </a>
-                <div class="overlay"></div>
-            </section>
+        
             <!-- Header Ends -->
             <section class="content-section text-center">
                 <div class="container">
-                    <div class="block-heading">
-                        <h2 class="display-4">New Model</h2>
-                        <p>Choose parameter of preference to suit your need.</p>
-                    </div>
                     <hr />
                     <form method="POST">
                         <div class="row mt-4">
@@ -107,8 +109,18 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="btn btn-lg btn-info px-3 text-center" type="submit">Next Step &nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </button>
+                        <div class="row text-center" style="align-content: center !important;">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 text-center">
+                <form action="#" class="form-group">
+                    <input type="file" id="userFile" name="filename" class="form-control">
+                    <input type="submit" value="Start training" class="form-control btn btn-primary" style="margin-top: 1vh;">
+                </form>
+                
+            </div>
+<!--            <button type="button" class="btn btn-warning" >Upload data</button>-->
+        </div>
+                        
                     </form>
                 </div>
             </section>

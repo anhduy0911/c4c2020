@@ -17,7 +17,7 @@
         <link href="../Style/bootstraps.css" rel="stylesheet" type="text/css">
         <link href="../Style/custom-responsive-styles.css" rel="stylesheet" type="text/css">
         <!--scripts-->
-        <script type="text/javascript" src="../Scripts/jquery-3.2.1.min.js"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
         <script type="text/javascript" src="../Scripts/fancy_box.js"></script>
         <script type="text/javascript" src="../Scripts/scroll_effect.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -91,7 +91,7 @@
             </div>
             <div class="service-content" >
 <!--              <h3>Privacy Policy</h3>-->
-              <p>We collects a variety of information and data that you provided directly to us.
+              <p style="text-align: justify;">We collects a variety of information and data that you provided directly to us.
                 We process your data to provide you with the Predicting Service that you have 
                 requested when accepting our Terms of Services. We may have a legitimate interest
                 to process your data for testing, maintainance and for analytics, research, and reporting purposes.
@@ -125,7 +125,11 @@
         <div class="row text-center" style="align-content: center !important;">
             <div class="col-md-4"></div>
             <div class="col-md-4 text-center">
-                <button type="button" class="btn btn-warning" >Upload data</button>
+                <form action="#" class="form-group">
+                    <input type="file" id="userFile" name="filename" class="form-control">
+                    <input type="submit" value="Upload file" class="form-control btn btn-primary" style="margin-top: 1vh;">
+                </form>
+                
             </div>
 <!--            <button type="button" class="btn btn-warning" >Upload data</button>-->
         </div>

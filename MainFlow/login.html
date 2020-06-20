@@ -5,24 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Login</title>
-  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="../Style/bootstraps.css" rel="stylesheet" type="text/css">
-        <link href="../Style/custom-responsive-styles.css" rel="stylesheet" type="text/css">
+    <link href="../Style/register.css" rel="stylesheet" type="text/css">
      <link rel="stylesheet" href="/Style/login.css">
-    <link rel="stylesheet" href="/Style/dung.css">
-        <!--scripts-->
-<!--        <script type="text/javascript" src="../Scripts/jquery-3.2.1.min.js"></script>-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
-<!--        them dong nay vao nhe dung cho -->
+     <link rel="stylesheet" href="/Style/dung.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../Scripts/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="../Scripts/fancy_box.js"></script>
-        <script type="text/javascript" src="../Scripts/scroll_effect.js"></script>
-  
-</head>
-<body>
-    <div class="logo">
+        <script type="text/javascript" src="../Scripts/scroll_effect.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+<!------ Include the above in your HEAD tag ---------->
+    </head>
+    <body>
+        <div class="logo">
             <i class="fa fa-globe" aria-hidden="true"><span>LOGO</span></i>
         </div>
         <a class="menu-toggle rounded" href="#">
@@ -63,27 +61,51 @@
             </div>
             
         </section>
-  <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
-    <div class="container">
-      <div class="card login-card">
-        <div class="row no-gutters">
-          <div class="col-md-5">
-            <img src="/Images/image2.png" alt="login" class="login-card-img" style="max-width: 100%;">
-          </div>
-          <div class="col-md-7">
-            <div class="card-body">
-              
-              <p class="login-card-description">Sign into your account</p>
-              <form action="#!">
+<div class="container register" style="width: 60%; text-align: center;">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                        <h3>Welcome</h3>
+                        <p>What are you waiting for? Log in and continue using our services.</p>
+<!--                        <input type="submit" name="" value="Log in"/><br/>-->
+                    </div>
+<!--                    <div class="col-md-3"></div>-->
+                    <div class="col-md-9 register-right">
+<!--
+                        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Employee</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Hirer</a>
+                            </li>
+                        </ul>
+-->
+                        <div class="tab-content" id="myTabContent">
+                            <div class="card-body">
+              <h2> <p class="login-card-description">Sign into your account</p></h2>
+<!--              <p class="login-card-description">Sign into your account</p>-->
+               <form action="#!">
                   <div class="form-group">
-                    <label for="email" class="sr-only">Email</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Email address">
+                    <label for="username" class="sr-only">Username</label>
+                    <input type="username" name="username" id="username" class="form-control" placeholder="Username">
                   </div>
                   <div class="form-group mb-4">
                     <label for="password" class="sr-only">Password</label>
                     <input type="password" name="password" id="password" class="form-control" placeholder="***********">
                   </div>
-                  <input name="login" id="login" class="btn btn-block login-btn mb-4" type="button" value="Login">
+                   <div class="text-center">
+                       <input name="login" id="login" class="btn mb-4" type="button" value="Login" style="width: 20%;
+    
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    color: #fff;
+    font-weight: 600;
+    width: 40%;
+    cursor: pointer;">
+                   </div>
+                  
                 </form>
                 <a href="#!" class="forgot-password-link">Forgot password?</a>
                 <p class="login-card-footer-text">Don't have an account? <a href="register.html" class="text-reset">Register here</a></p>
@@ -92,38 +114,36 @@
                   <a href="#!">Privacy policy</a>
                 </nav>
             </div>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="card login-card">
-        <img src="assets/images/login.jpg" alt="login" class="login-card-img">
-        <div class="card-body">
-          <h2 class="login-card-title">Login</h2>
-          <p class="login-card-description">Sign in to your account to continue.</p>
-          <form action="#!">
-            <div class="form-group">
-              <label for="email" class="sr-only">Email</label>
-              <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                            
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="form-group">
-              <label for="password" class="sr-only">Password</label>
-              <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+        <footer class="footer text-center">
+            <div class="container">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white mr-3" href="javascript:void(0)">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white mr-3" href="javascript:void(0)">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white" href="javascript:void(0)">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+                <p class="text-muted small mb-0">Copyright © Lab Mr Hung Mrs Le :D</p>
             </div>
-            <div class="form-prompt-wrapper">
-              <div class="custom-control custom-checkbox login-card-check-box">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">Remember me</label>
-              </div>              
-              <a href="#!" class="text-reset">Forgot password?</a>
-            </div>
-            <input name="login" id="login" class="btn btn-block login-btn mb-4" type="button" value="Login">
-          </form>
-          <p class="login-card-footer-text">Don't have an account? <a href="#!" class="text-reset">Register here</a></p>
-        </div>
-      </div> -->
-    </div>
-  </main>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        </footer>
+    
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </body>

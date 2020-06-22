@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" /> -->
+        <title>History</title>
+        <!--stylesheet-->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="../Style/styles.css" rel="stylesheet" type="text/css">
+        <link href="../Style/dung.css" rel="stylesheet" type="text/css">
+        <link href="../Style/bootstraps.css" rel="stylesheet" type="text/css">
+        <link href="../Style/custom-responsive-styles.css" rel="stylesheet" type="text/css">
+        <!--scripts-->
+       
+        
+        <script type="text/javascript" src="../Scripts/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../Scripts/fancy_box.js"></script>
+        <script type="text/javascript" src="../Scripts/scroll_effect.js"></script>
+        <!--        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>-->
+          
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+
+    <body>
+        <div id="history">
+            <!-- Navigation -->
+            <div class="logo">
+                <i class="fa fa-globe" aria-hidden="true"><span>LOGO</span></i>
+            </div>
+            <a class="menu-toggle rounded" href="#">
+                <i class="fa fa-bars"></i>
+                <nav id="sidebar-wrapper">
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-brand">
+                            <a class="smooth-scroll" href="#"></a>
+                        </li>
+                        <li class="sidebar-nav-item">
+                            <a class="smooth-scroll" href="index.html">Domain</a>
+                        </li>
+                        <li class="sidebar-nav-item">
+                            <a class="smooth-scroll" href="#dash_board">Dashboard</a>
+                        </li>
+                        <li class="sidebar-nav-item">
+                            <a class="smooth-scroll" href="test.html">Prediction</a>
+                        </li>
+                        <li class="sidebar-nav-item">
+                            <a class="smooth-scroll" href="train_model.html">New Training</a>
+                        </li>
+                        <li class="sidebar-nav-item">
+                            <a class="smooth-scroll" href="#dash_board">History</a>
+                        </li>
+                        <li class="sidebar-nav-item">
+                            <a class="smooth-scroll" href="#">Support</a>
+                        </li>
+                    </ul>
+                </nav>
+            </a>
+            <!-- Header Starts -->
+            <section id="Banner" class="content-section" style="max-height: 10vw !important;">
+                <div class="container content-wrap text-center">
+                    <h1>Training History</h1>
+                </div>
+            </section>
+            <section id="history_grid">
+                <div class="container mt-3" style="text-align: center;">
+                    <div class="row" style = "text-align: center;">
+                            <div class="col-sm-2"></div>
+                            <div class="list-group col-sm-8 mg-2">
+                                <a href="#" class="list-group-item list-group-item-action list-group-item-primary" v-for='model in models' >
+                                    <h4>Model {{model_id}} </h4>
+                                    <p>Model name: {{model.name}}</p>
+                                    <p>Accuracy: {{model.acc_test}}</p>
+                                    <p>Last update: {{ model.last_update }}</p>
+                                    <p>Domain: {{model.domain}}</p>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+            </section>
+            
+            
+
+            <footer class="footer text-center">
+                <div class="container">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a class="social-link rounded-circle text-white mr-3" href="javascript:void(0)">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="social-link rounded-circle text-white mr-3" href="javascript:void(0)">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="social-link rounded-circle text-white" href="javascript:void(0)">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="text-muted small mb-0">Copyright © Lab Mr Hung Mrs Le :D</p>
+                </div>
+            </footer>
+            <!-- Header Ends -->
+        </div>
+        <script type="text/javascript" src="../Scripts/dash_board.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
+<!--        <script src="/Scripts/history.js"></script>-->
+    </body>
+
+</html>
